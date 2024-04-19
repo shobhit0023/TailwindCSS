@@ -1,0 +1,27 @@
+Steps to add Tailwind to a file.
+
+1.Create an empty folder in vs code.
+2.open terminal then enter npm init
+3.after that step enter npm i vite.
+4.Then in terminal enter: npm install -D tailwindcss postcss autoprefixer
+5.After that enter: npx tailwindcss init
+6. create postcss.config.js file and add this code:module.exports = {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  }
+7.In tailwind config.js file write: 
+module.exports = {
+  content: ["*"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+8.Create main.css file and write : @tailwind base;
+@tailwind components;
+@tailwind utilities;
+8. create html file and link css file .
+9. in terminal enter: npm start
